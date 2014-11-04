@@ -36,43 +36,32 @@
 \begin{document}
 \maketitle
 
-\section{Introduction}
-\begin{equation}
-    \label{simple_equation}
-    \frac{m{v}^{2}}{r} = \frac{Bqv}{r}
-\end{equation}
-\begin{equation}
-    \label{simple_equation}
-    \frac{1}{2}m{v}^{2} = {E}_{k}
-\end{equation}
-Combined with the two equations, 
-\begin{equation}
-    \label{simple_equation}
-    B = \frac{\sqrt{2m{E}_{k}}}{rq}
-\end{equation}
-could be deduced.\\ 
+% \section{magnetic field}
+According to 
+\begin{align}
+    \label{eq:1}
+    Bqv = \frac{m{v}^{2}}{r} \\ 
+    {E}_{k} = \frac{1}{2}m{v}^{2} \\
+    Uq = {E}_{k}
+\end{align}
+we can deduce
+\begin{align}
+    \label{eq:2}
+    B = \sqrt{\frac{2Um}{q}}\frac{1}{r}.
+\end{align} 
 If units are given:
-$${E}_{k} : \si{keV},       \SI{1}{eV} = \SI{1.6e-19}{J}$$;
-$$m : \si{amu},  1 amu = 1.67 x 10^{-27} kg;$$ 
-$$q : {e}^{-}, 1 e^{-} = 1.6x 10^{-19} C;$$
-$$r : cm.  $$
-
-The function $B = \frac{\sqrt{2m x 1.67 x 10^{-27} x {E}_{k} x 1.6x 10^{-19} x 10^{3} }}{r x 10^{-2} x q x 1.6x 10^{-19} } = 0.457 \frac{\sqrt{m{E}_{k}}}{qr}$
-$$\frac{m{v}^{2}}{r} = \frac{Bqv}{r}$$
-$$\frac{1}{2}m{v}^{2} = {E}_{k}$$
-$$B = \frac{\sqrt{2m{E}_{k}}}{rq}$$
-\begin{equation}
-    \label{simple_equation}
-    \alpha = \sqrt{ \beta }
-\end{equation}
-
-\subsection{Subsection Heading Here}
-Write your subsection text here.
-
-
-
-\section{Conclusion}
-Write your conclusion here.
+\begin{align}
+    U : \si{kV},   \SI{1}{kV} = \SI{e3}{V} \\ 
+    m : \si{amu},  \SI{1}{amu} = \SI{1.67e-27}{kg} \\ 
+    q : \si{e}, \SI{1}{e} = \SI{1.6e-19}{C} \\ 
+    r : \si{cm}, \SI{1}{cm} = \SI{e-2}{m}
+\end{align}
+\begin{align}
+    B = \frac{\sqrt{2Um\times\SI{e3}{V}\times\SI{1.67e-27}{kg}}}{q\times\SI{1.6e-19}{C}}\frac{1}{r\times\SI{e-2}{m}} 
+      = 0.457\sqrt{\frac{Um}{q}}\frac{1}{r}.
+\end{align}
+If $U = 7\si{kV}$, $r = 57\si{cm}$ and the ion is $N^{+1}_{2}$ which means $m = 28$ and $ q = 1$, $B =  0.112\si{T}$.\\ 
+If $B =  0.022\si{T}$,$U = 7\si{kV}$ and $r = 57\si{cm}$, $\frac{m}{q} = 1.0756$.
 
 \renewcommand{\bibname}{Bibliography}
 \bibliographystyle{plainnat}
@@ -89,3 +78,4 @@ Write your conclusion here.
 %%% TeX-master: t
 %%% fill-column: 97
 %%% End: 
+
