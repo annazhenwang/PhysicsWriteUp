@@ -1,0 +1,91 @@
+\documentclass[letterpaper,11pt,pdftex]{article}
+\usepackage[left=1in,right=1in,bottom=1in]{geometry}
+
+%\usepackage{mathptmx}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{upgreek}
+\usepackage[load-configurations=abbreviations,detect-all=true]{siunitx}
+\usepackage[version=3]{mhchem}
+\usepackage[all]{xy}
+\usepackage{url}
+
+\usepackage{datetime}
+%\renewcommand{\dateseparator}{}
+\newdateformat{yyyymmdd}{\twodigit\THEYEAR\twodigit\THEMONTH\twodigit\THEDAY}
+
+\usepackage{graphicx}
+\usepackage{lscape}
+%\usepackage{indentfirst}
+\pagestyle{plain}
+\usepackage{setspace}
+%\doublespacing
+\renewcommand{\baselinestretch}{1.1}
+\usepackage[numbers,sort&compress]{natbib}
+
+%\input{defs}
+
+\title{Calculate the magnetic field of bending magnet }
+\author{Zhen Wang}
+\date{\today\footnote{Created: 20141103}}
+%\date{\yyyymmdd\today}
+\begin{document}
+\maketitle
+
+\section{Introduction}
+\begin{equation}
+    \label{simple_equation}
+    \frac{m{v}^{2}}{r} = \frac{Bqv}{r}
+\end{equation}
+\begin{equation}
+    \label{simple_equation}
+    \frac{1}{2}m{v}^{2} = {E}_{k}
+\end{equation}
+Combined with the two equations, 
+\begin{equation}
+    \label{simple_equation}
+    B = \frac{\sqrt{2m{E}_{k}}}{rq}
+\end{equation}
+could be deduced.\\ 
+If units are given:
+$${E}_{k} : \si{keV},       \SI{1}{eV} = \SI{1.6e-19}{J}$$;
+$$m : \si{amu},  1 amu = 1.67 x 10^{-27} kg;$$ 
+$$q : {e}^{-}, 1 e^{-} = 1.6x 10^{-19} C;$$
+$$r : cm.  $$
+
+The function $B = \frac{\sqrt{2m x 1.67 x 10^{-27} x {E}_{k} x 1.6x 10^{-19} x 10^{3} }}{r x 10^{-2} x q x 1.6x 10^{-19} } = 0.457 \frac{\sqrt{m{E}_{k}}}{qr}$
+$$\frac{m{v}^{2}}{r} = \frac{Bqv}{r}$$
+$$\frac{1}{2}m{v}^{2} = {E}_{k}$$
+$$B = \frac{\sqrt{2m{E}_{k}}}{rq}$$
+\begin{equation}
+    \label{simple_equation}
+    \alpha = \sqrt{ \beta }
+\end{equation}
+
+\subsection{Subsection Heading Here}
+Write your subsection text here.
+
+
+
+\section{Conclusion}
+Write your conclusion here.
+
+\renewcommand{\bibname}{Bibliography}
+\bibliographystyle{plainnat}
+% \bibliography{refs}
+% \begin{thebibliography}{99}
+% \bibitem{tag0} Bib1 \url{http://www.google.com}
+% \end{thebibliography}
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-engine: default
+%%% TeX-PDF-mode: t
+%%% TeX-master: t
+%%% fill-column: 97
+%%% End: 
