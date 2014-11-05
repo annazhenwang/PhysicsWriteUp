@@ -47,9 +47,13 @@ According to
 \end{align}
 we can deduce
 \begin{align}
-    \label{eq:2}
-    B = \frac{\sqrt{2}}{r}\sqrt{\frac{m}{q}}\sqrt{U}.
-\end{align} 
+ B = \left\{
+            \begin{array}{l l}
+                \frac{\sqrt{2}}{r}\sqrt{\frac{m}{q}}\sqrt{U} & \quad $q > 0$ \\ 
+                -\frac{\sqrt{2}}{r}\sqrt{-\frac{m}{q}}\sqrt{-U} & \quad $q < 0$ 
+            \end{array}
+        \right.
+\end{align}        
 If units are given:
 \begin{align}
     U &: [\si{kV}],  & \SI{1}{kV}  &= \SI{e3}{V} \\ 
@@ -57,11 +61,23 @@ If units are given:
     q &: [\si{e}],   & \SI{1}{e}   &= \SI{1.6e-19}{C} \\ 
     r &: [\si{cm}],  & \SI{1}{cm}  &= \SI{e-2}{m}
 \end{align}
+\begingroup
+\Large
 \begin{align}
-    B = \frac{\sqrt{2}}{r[\si{cm}]\SI{e-2}{}}\sqrt{\frac{m[\si{amu}]}{q[\si{e}]}}\sqrt{\frac{\SI{1.67e-27}{}}{\SI{1.6e-19}{}}}\sqrt{U[\si{kV}]}10^{\frac{3}{2}} 
-      = \frac{0.457}{r[\si{cm}]}\sqrt{\frac{m[\si{amu}]}{q[\si{e}]}}\sqrt{U[\si{kV}]} [\si{T}].
+    B & = \left\{
+            \begin{array}{l l}
+                \frac{\sqrt{2}}{r[\si{cm}]\SI{e-2}{}}\sqrt{\frac{m[\si{amu}]}{q[\si{e}]}}\sqrt{\frac{\SI{1.67e-27}{}}{\SI{1.6e-19}{}}}\sqrt{U[\si{kV}]}10^{\frac{3}{2}}  & \quad $q > 0$  \\ 
+                -\frac{\sqrt{2}}{r[\si{cm}]\SI{e-2}{}}\sqrt{-\frac{m[\si{amu}]}{q[\si{e}]}}\sqrt{\frac{\SI{1.67e-27}{}}{\SI{1.6e-19}{}}}\sqrt{-U[\si{kV}]}10^{\frac{3}{2}}  & \quad $q < 0$  
+            \end{array}
+        \right. \\   
+      & = \left\{
+            \begin{array}{l l}
+                \frac{0.457}{r[\si{cm}]}\sqrt{\frac{m[\si{amu}]}{q[\si{e}]}}\sqrt{U[\si{kV}]} [\si{T}] & \quad $q > 0$  \\ 
+                -\frac{0.457}{r[\si{cm}]}\sqrt{-\frac{m[\si{amu}]}{q[\si{e}]}}\sqrt{-U[\si{kV}]} [\si{T}] & \quad $q < 0$ 
+            \end{array}
+        \right.       
 \end{align}
-
+\endgroup
 \setlength{\tabcolsep}{9pt} % space between columns
 \renewcommand{\arraystretch}{1.5}% space between rows
 
@@ -73,7 +89,7 @@ If units are given:
         Ion & \(\displaystyle \frac{m}{q}\) & r[\si{cm}] & U[\si{kV}] & B[\si{T}] \\ \hline
         \chem{H_{2}^{2+}} & 1 & 57 & 7 & 0.021 \\ \hline
         \chem{H_{2}^{+}} & 2 & 57 & 7 & 0.030 \\ \hline
-        \chem{O^{2-}} & 8 & 57 & 7 & 0.060 \\ \hline
+        \chem{O^{2-}} & -8 & 57 & -7 & -0.060 \\ \hline
         \chem{Ne^{+}} & 20 & 57 & 7 & 0.095\\ \hline
         \chem{N_{2}^{+}} & 28 & 57 & 7 & 0.112\\ \hline
         \chem{O_{2}^{+}} & 32 & 57 & 7 & 0.120\\ \hline
